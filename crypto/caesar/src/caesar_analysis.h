@@ -1,7 +1,6 @@
 #ifndef CAESAR_ANALYSIS_H
 #define CAESAR_ANALYSIS_H
 
-#include <algorithm>
 #include <cctype>
 #include <string>
 #include <vector>
