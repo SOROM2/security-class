@@ -1,7 +1,6 @@
 #ifndef VIGENERE_ANALYSIS_H
 #define VIGENERE_ANALYSIS_H
 
-#include <iostream>
 #include <string>
 #include <cctype>
 
