@@ -2,7 +2,6 @@
 
 import sys
 from Crypto.Cipher import AES
-from textblob import TextBlob
 
 if len(sys.argv) != 2:
     print (f"Usage:\n{sys.argv[0]} <weak ciphertext file>")
