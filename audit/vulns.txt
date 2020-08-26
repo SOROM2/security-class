@@ -89,4 +89,5 @@ storm_trooper_5:casiopia
 imperial_guard::walkoflife
 captain_needa:?
 
-Kernel version 3.13.0-32-generic is vulnerable to "dirty cow" exploit, it crashes the box
+Kernel version 3.13.0.32-generic is vulnerable to CVE-2015-1328 "overlayfs" local privilege escalation
+
