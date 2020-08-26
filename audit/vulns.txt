@@ -1,0 +1,92 @@
+22/tcp      OpenSSH 6.6.1p1 Ubuntu 2Ubuntu2.10
+    credential reuse:
+        captain_needa:darksidegod@hotmail.com
+        boba_fett:bountyhunter1976
+80/tcp      Apache httpd 2.4.7
+    /drupal/
+        Drupalgeddon WORKS
+    /payroll_app.php
+        SQL injection (poc.rb) WORKS
+    /phpmyadmin/
+        phpmyadmin_preg_replace
+    /chat/
+        Command injection
+445/tcp		Samba 4.3.11-Ubuntu
+    is_known_pipename
+3306/tcp	MySQL
+	root:sploitme
+6667/tcp	UnrealIRC 3.2
+    AB; backdoor WORKS
+6697/tcp	UnrealIRC 3.2
+    AB; backdoor WORKS
+8067/tcp	infi-async?
+8080/tcp	Jetty 8.1.7.v20120910
+	/continuum/security/
+	/continuum/struts/xhtml/
+        apache_continuum_cmd_exec
+8181/tcp	WEBrick httpd 1.3.1 (Ruby 2.3.6)
+	Set-Cookie: _metasploitable=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRWI4ZmI0NTM2NjgwYzM5ZDEyYTM4%0AZjNjZTQyMDA4NmEwYzg4MmFlYTU4NzJhM2QyNTBjN2QxNzFjMDk2YTk5MjYG%0AOwBGSSIUX21ldGFzcGxvaXRhYmxlBjsAVEkiVFNoaGhoaCwgZG9uJ3QgdGVs%0AbCBhbnlib2R5IHRoaXMgY29va2llIHNlY3JldDogYTdhZWJjMjg3YmJhMGVl%0ANGU2NGY5NDc0MTVhOTRlNWYGOwBU%0A--e24ddb5f09ce888f36b88cadde08fcf1f8228aca;
+
+
+UnrealIRC vulnerable to CVE-2010-2075, malicious backdoor.
+Metasploit script exploit/unix/irc/unreal_ircd_3281_backdoor exploits this to execute arbitrary commands.
+POC:
+./poc/unrealirc3.2_backdoor.sh
+
+boba_fett storing the password of darth_vader account in /home/boba_fett/darth_vaders_password.txt
+    darth_vader:daddy_issues-7733
+
+Can just sudo to root from these users:
+sudo:x:27:vagrant,captain_needa,admiral_piett,admiral_ozzel,general_veers,emperor_palpatine,darth_sidious,boba_fett,death_star_admin,darth_vader
+
+ssh into darth_vader@10.25.100.24 using the password
+sudo su - with the password
+root'd
+
+Dumped /etc/shadow as root
+
+Cracked 14/15 passwords with custom wordlist aggregated from public sources, we already had dath vader's password.
+storm_trooper_1:starwarsrocks
+storm_trooper_2:stormtrooper1
+storm_trooper_3:Lego starwars
+storm_trooper_4:starwarsbatman
+storm_trooper_5:Password1234567
+imperial_guards:starwars4life
+captain_needa:darksidegod@hotmail.com
+admiral_piett:darksideofthemoon
+admiral_ozzel:darksiderules
+general_veers:darkside3000@hotmail.com
+emperor_palpatine:912Deathstars
+darth_sidious:7ujMko0admin
+boba_fett:bountyhunter1976
+death_star_admin:<3DeathStars<3
+
+payroll web app vulnerable to SQL injection
+Storing passwords in plaintext in payroll database
+POC:
+./poc/payrollapp_sqli.sh
+
+Database credentials can also be found hardcoded in the world-readable file: /var/www/html/drupal/sites/default/settings.php
+    root:sploitme
+This can be logged into remotely.
+
+boba_fett and captain_needa re-using password from the payroll database for their user account
+
+drupal is vulnerable to CVE-2014-3704 SQL injection
+Metasploit script exploit/multi/http/drupal_drupageddon leverages this to create a new user, that then embeds a php payload in a custom page.
+
+?phpmyadmin version 3.5.8 is vulnerable to  
+?Metasploit script exploit/multi/http/phpmyadmin_preg_replace successfully exploits this.
+
+a section of a shadow file can be found in /home/vagrant/passwords
+It does not look like the vagrant box is online.
+Cracked:
+storm_trooper_1:?
+storm_trooper_2:moonlight
+storm_trooper_3:earthsong
+storm_trooper_4:evilempire
+storm_trooper_5:casiopia
+imperial_guard::walkoflife
+captain_needa:?
+
+Kernel version 3.13.0-32-generic is vulnerable to "dirty cow" exploit, it crashes the box

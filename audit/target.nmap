@@ -1,0 +1,1863 @@
+# Nmap 7.70 scan initiated Tue Aug 11 15:33:13 2020 as: nmap -A -sT -sV -Pn -v -p- --script=discovery,vuln -oN target.nmap 10.25.100.24
+Pre-scan script results:
+| broadcast-ping: 
+|   IP: 10.25.0.1  MAC: cc:ef:48:f8:d4:bf
+|   IP: 10.25.0.2  MAC: cc:ef:48:f8:ce:7f
+|_  Use --script-args=newtargets to add the results as targets
+| targets-asn: 
+|_  targets-asn.asn is a mandatory parameter
+| targets-ipv6-multicast-echo: 
+|   IP: fe80::250:56ff:fe86:9736  MAC: 00:50:56:86:97:36  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5282  MAC: 00:50:56:86:52:82  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:21bd  MAC: 00:50:56:86:21:bd  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:9cb0  MAC: 00:50:56:86:9c:b0  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d9df  MAC: 00:50:56:86:d9:df  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5d18  MAC: 00:50:56:86:5d:18  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d3d1  MAC: 00:50:56:86:d3:d1  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6763  MAC: 00:50:56:86:67:63  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:7b71  MAC: 00:50:56:86:7b:71  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6d2a  MAC: 00:50:56:86:6d:2a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:30b6  MAC: 00:50:56:86:30:b6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:39a0  MAC: 00:50:56:86:39:a0  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:79d5  MAC: 00:50:56:86:79:d5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8189  MAC: 00:50:56:86:81:89  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5028  MAC: 00:50:56:86:50:28  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:acd8  MAC: 00:50:56:86:ac:d8  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4d23  MAC: 00:50:56:86:4d:23  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:34f9  MAC: 00:50:56:86:34:f9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8520  MAC: 00:50:56:86:85:20  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e8d5  MAC: 00:50:56:86:e8:d5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e69d  MAC: 00:50:56:86:e6:9d  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5f65  MAC: 00:50:56:86:5f:65  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5350  MAC: 00:50:56:86:53:50  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6b8a  MAC: 00:50:56:86:6b:8a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d08f  MAC: 00:50:56:86:d0:8f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c498  MAC: 00:50:56:86:c4:98  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8127  MAC: 00:50:56:86:81:27  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5e6   MAC: 00:50:56:86:05:e6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f1b8  MAC: 00:50:56:86:f1:b8  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8198  MAC: 00:50:56:86:81:98  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d8ec  MAC: 00:50:56:86:d8:ec  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:993f  MAC: 00:50:56:86:99:3f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:7961  MAC: 00:50:56:86:79:61  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e839  MAC: 00:50:56:86:e8:39  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3906  MAC: 00:50:56:86:39:06  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:687f  MAC: 00:50:56:86:68:7f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:401   MAC: 00:50:56:86:04:01  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:fd56  MAC: 00:50:56:86:fd:56  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:103a  MAC: 00:50:56:86:10:3a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:fd61  MAC: 00:50:56:86:fd:61  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a0ae  MAC: 00:50:56:86:a0:ae  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f877  MAC: 00:50:56:86:f8:77  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:9595  MAC: 00:50:56:86:95:95  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6a6   MAC: 00:50:56:86:06:a6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:7677  MAC: 00:50:56:86:76:77  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a5d9  MAC: 00:50:56:86:a5:d9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b07c  MAC: 00:50:56:86:b0:7c  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3f14  MAC: 00:50:56:86:3f:14  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:1c40  MAC: 00:50:56:86:1c:40  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:228a  MAC: 00:50:56:86:22:8a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d451  MAC: 00:50:56:86:d4:51  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:bc53  MAC: 00:50:56:86:bc:53  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b270  MAC: 00:50:56:86:b2:70  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:31fc  MAC: 00:50:56:86:31:fc  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:2356  MAC: 00:50:56:86:23:56  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a8ed  MAC: 00:50:56:86:a8:ed  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f423  MAC: 00:50:56:86:f4:23  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e278  MAC: 00:50:56:86:e2:78  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a369  MAC: 00:50:56:86:a3:69  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:300a  MAC: 00:50:56:86:30:0a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:449f  MAC: 00:50:56:86:44:9f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b829  MAC: 00:50:56:86:b8:29  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8a3   MAC: 00:50:56:86:08:a3  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4f71  MAC: 00:50:56:86:4f:71  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4a37  MAC: 00:50:56:86:4a:37  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4dd2  MAC: 00:50:56:86:4d:d2  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:66d2  MAC: 00:50:56:86:66:d2  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6ac6  MAC: 00:50:56:86:6a:c6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f8b   MAC: 00:50:56:86:0f:8b  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:baad  MAC: 00:50:56:86:ba:ad  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c7ab  MAC: 00:50:56:86:c7:ab  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:ad8c  MAC: 00:50:56:86:ad:8c  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:2cb9  MAC: 00:50:56:86:2c:b9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e70e  MAC: 00:50:56:86:e7:0e  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:15be  MAC: 00:50:56:86:15:be  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a961  MAC: 00:50:56:86:a9:61  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d9a1  MAC: 00:50:56:86:d9:a1  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3480  MAC: 00:50:56:86:34:80  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5212  MAC: 00:50:56:86:52:12  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b371  MAC: 00:50:56:86:b3:71  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4a6   MAC: 00:50:56:86:04:a6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6f62  MAC: 00:50:56:86:6f:62  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:bdca  MAC: 00:50:56:86:bd:ca  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b243  MAC: 00:50:56:86:b2:43  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:43ae  MAC: 00:50:56:86:43:ae  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e7a9  MAC: 00:50:56:86:e7:a9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3deb  MAC: 00:50:56:86:3d:eb  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:769f  MAC: 00:50:56:86:76:9f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:ec58  MAC: 00:50:56:86:ec:58  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b767  MAC: 00:50:56:86:b7:67  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c882  MAC: 00:50:56:86:c8:82  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:61b7  MAC: 00:50:56:86:61:b7  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:55a5  MAC: 00:50:56:86:55:a5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d3db  MAC: 00:50:56:86:d3:db  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d582  MAC: 00:50:56:86:d5:82  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:39c9  MAC: 00:50:56:86:39:c9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:1815  MAC: 00:50:56:86:18:15  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f6c   MAC: 00:50:56:86:0f:6c  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:9925  MAC: 00:50:56:86:99:25  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:310a  MAC: 00:50:56:86:31:0a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e20d  MAC: 00:50:56:86:e2:0d  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:adfb  MAC: 00:50:56:86:ad:fb  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:de11  MAC: 00:50:56:86:de:11  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a64e  MAC: 00:50:56:86:a6:4e  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:af86  MAC: 00:50:56:86:af:86  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:70d9  MAC: 00:50:56:86:70:d9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e086  MAC: 00:50:56:86:e0:86  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4a01  MAC: 00:50:56:86:4a:01  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d194  MAC: 00:50:56:86:d1:94  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:9553  MAC: 00:50:56:86:95:53  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:89ca  MAC: 00:50:56:86:89:ca  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8658  MAC: 00:50:56:86:86:58  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d961  MAC: 00:50:56:86:d9:61  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b293  MAC: 00:50:56:86:b2:93  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3277  MAC: 00:50:56:86:32:77  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:cb3c  MAC: 00:50:56:86:cb:3c  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:97fc  MAC: 00:50:56:86:97:fc  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f7b5  MAC: 00:50:56:86:f7:b5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:278d  MAC: 00:50:56:86:27:8d  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b696  MAC: 00:50:56:86:b6:96  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4bf7  MAC: 00:50:56:86:4b:f7  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b113  MAC: 00:50:56:86:b1:13  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:1de6  MAC: 00:50:56:86:1d:e6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5571  MAC: 00:50:56:86:55:71  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:63fd  MAC: 00:50:56:86:63:fd  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d7c8  MAC: 00:50:56:86:d7:c8  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b59c  MAC: 00:50:56:86:b5:9c  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:92f   MAC: 00:50:56:86:09:2f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:93d5  MAC: 00:50:56:86:93:d5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:ea00  MAC: 00:50:56:86:ea:00  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:92e3  MAC: 00:50:56:86:92:e3  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8750  MAC: 00:50:56:86:87:50  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:2276  MAC: 00:50:56:86:22:76  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b1ea  MAC: 00:50:56:86:b1:ea  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:7323  MAC: 00:50:56:86:73:23  IFACE: eth0
+|   IP: fe80::250:56ff:fe01:13d7  MAC: 00:50:56:01:13:d7  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:238e  MAC: 00:50:56:86:23:8e  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8f7f  MAC: 00:50:56:86:8f:7f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:ff58  MAC: 00:50:56:86:ff:58  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:ab0f  MAC: 00:50:56:86:ab:0f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e19d  MAC: 00:50:56:86:e1:9d  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3892  MAC: 00:50:56:86:38:92  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c843  MAC: 00:50:56:86:c8:43  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4dcc  MAC: 00:50:56:86:4d:cc  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:9c1f  MAC: 00:50:56:86:9c:1f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c55f  MAC: 00:50:56:86:c5:5f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6c32  MAC: 00:50:56:86:6c:32  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c034  MAC: 00:50:56:86:c0:34  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:43b5  MAC: 00:50:56:86:43:b5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4297  MAC: 00:50:56:86:42:97  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:1ccf  MAC: 00:50:56:86:1c:cf  IFACE: eth0
+|_  Use --script-args=newtargets to add the results as targets
+| targets-ipv6-multicast-invalid-dst: 
+|   IP: fe80::250:56ff:fe86:9cb0  MAC: 00:50:56:86:9c:b0  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d9df  MAC: 00:50:56:86:d9:df  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:9736  MAC: 00:50:56:86:97:36  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5282  MAC: 00:50:56:86:52:82  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d3d1  MAC: 00:50:56:86:d3:d1  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6763  MAC: 00:50:56:86:67:63  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:39a0  MAC: 00:50:56:86:39:a0  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:7b71  MAC: 00:50:56:86:7b:71  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6d2a  MAC: 00:50:56:86:6d:2a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5d18  MAC: 00:50:56:86:5d:18  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:34f9  MAC: 00:50:56:86:34:f9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:79d5  MAC: 00:50:56:86:79:d5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:30b6  MAC: 00:50:56:86:30:b6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:acd8  MAC: 00:50:56:86:ac:d8  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:9595  MAC: 00:50:56:86:95:95  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5028  MAC: 00:50:56:86:50:28  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6b8a  MAC: 00:50:56:86:6b:8a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e8d5  MAC: 00:50:56:86:e8:d5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c498  MAC: 00:50:56:86:c4:98  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e69d  MAC: 00:50:56:86:e6:9d  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5f65  MAC: 00:50:56:86:5f:65  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5350  MAC: 00:50:56:86:53:50  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8127  MAC: 00:50:56:86:81:27  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8198  MAC: 00:50:56:86:81:98  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:993f  MAC: 00:50:56:86:99:3f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f1b8  MAC: 00:50:56:86:f1:b8  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d08f  MAC: 00:50:56:86:d0:8f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5e6   MAC: 00:50:56:86:05:e6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:7961  MAC: 00:50:56:86:79:61  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d8ec  MAC: 00:50:56:86:d8:ec  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:687f  MAC: 00:50:56:86:68:7f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e839  MAC: 00:50:56:86:e8:39  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:fd61  MAC: 00:50:56:86:fd:61  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:401   MAC: 00:50:56:86:04:01  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6a6   MAC: 00:50:56:86:06:a6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a0ae  MAC: 00:50:56:86:a0:ae  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f877  MAC: 00:50:56:86:f8:77  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3906  MAC: 00:50:56:86:39:06  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3f14  MAC: 00:50:56:86:3f:14  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a5d9  MAC: 00:50:56:86:a5:d9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:228a  MAC: 00:50:56:86:22:8a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:103a  MAC: 00:50:56:86:10:3a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b07c  MAC: 00:50:56:86:b0:7c  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:7677  MAC: 00:50:56:86:76:77  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b270  MAC: 00:50:56:86:b2:70  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:bc53  MAC: 00:50:56:86:bc:53  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a8ed  MAC: 00:50:56:86:a8:ed  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:31fc  MAC: 00:50:56:86:31:fc  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:2356  MAC: 00:50:56:86:23:56  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d451  MAC: 00:50:56:86:d4:51  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e278  MAC: 00:50:56:86:e2:78  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f423  MAC: 00:50:56:86:f4:23  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:300a  MAC: 00:50:56:86:30:0a  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b829  MAC: 00:50:56:86:b8:29  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:449f  MAC: 00:50:56:86:44:9f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a369  MAC: 00:50:56:86:a3:69  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8a3   MAC: 00:50:56:86:08:a3  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4f71  MAC: 00:50:56:86:4f:71  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6ac6  MAC: 00:50:56:86:6a:c6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4a37  MAC: 00:50:56:86:4a:37  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4dd2  MAC: 00:50:56:86:4d:d2  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:ad8c  MAC: 00:50:56:86:ad:8c  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:66d2  MAC: 00:50:56:86:66:d2  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f8b   MAC: 00:50:56:86:0f:8b  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:baad  MAC: 00:50:56:86:ba:ad  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c7ab  MAC: 00:50:56:86:c7:ab  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3480  MAC: 00:50:56:86:34:80  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e70e  MAC: 00:50:56:86:e7:0e  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a961  MAC: 00:50:56:86:a9:61  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:2cb9  MAC: 00:50:56:86:2c:b9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d9a1  MAC: 00:50:56:86:d9:a1  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:15be  MAC: 00:50:56:86:15:be  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5212  MAC: 00:50:56:86:52:12  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b371  MAC: 00:50:56:86:b3:71  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6f62  MAC: 00:50:56:86:6f:62  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4a6   MAC: 00:50:56:86:04:a6  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b243  MAC: 00:50:56:86:b2:43  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:bdca  MAC: 00:50:56:86:bd:ca  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:769f  MAC: 00:50:56:86:76:9f  IFACE: eth0
+|   IP: fe80::fc4b:9097:3678:1e2  MAC: 00:50:56:86:4d:95  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3deb  MAC: 00:50:56:86:3d:eb  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:43ae  MAC: 00:50:56:86:43:ae  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d3db  MAC: 00:50:56:86:d3:db  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e7a9  MAC: 00:50:56:86:e7:a9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:61b7  MAC: 00:50:56:86:61:b7  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b767  MAC: 00:50:56:86:b7:67  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:ec58  MAC: 00:50:56:86:ec:58  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c882  MAC: 00:50:56:86:c8:82  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:55a5  MAC: 00:50:56:86:55:a5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:1815  MAC: 00:50:56:86:18:15  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d582  MAC: 00:50:56:86:d5:82  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:39c9  MAC: 00:50:56:86:39:c9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:adfb  MAC: 00:50:56:86:ad:fb  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f6c   MAC: 00:50:56:86:0f:6c  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e086  MAC: 00:50:56:86:e0:86  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:de11  MAC: 00:50:56:86:de:11  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e20d  MAC: 00:50:56:86:e2:0d  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:a64e  MAC: 00:50:56:86:a6:4e  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8658  MAC: 00:50:56:86:86:58  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:9553  MAC: 00:50:56:86:95:53  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:70d9  MAC: 00:50:56:86:70:d9  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d194  MAC: 00:50:56:86:d1:94  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:d961  MAC: 00:50:56:86:d9:61  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:af86  MAC: 00:50:56:86:af:86  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3277  MAC: 00:50:56:86:32:77  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:cb3c  MAC: 00:50:56:86:cb:3c  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:f7b5  MAC: 00:50:56:86:f7:b5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:89ca  MAC: 00:50:56:86:89:ca  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b293  MAC: 00:50:56:86:b2:93  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b696  MAC: 00:50:56:86:b6:96  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:97fc  MAC: 00:50:56:86:97:fc  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:278d  MAC: 00:50:56:86:27:8d  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4bf7  MAC: 00:50:56:86:4b:f7  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b113  MAC: 00:50:56:86:b1:13  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:63fd  MAC: 00:50:56:86:63:fd  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:5571  MAC: 00:50:56:86:55:71  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:ea00  MAC: 00:50:56:86:ea:00  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:92f   MAC: 00:50:56:86:09:2f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:92e3  MAC: 00:50:56:86:92:e3  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:93d5  MAC: 00:50:56:86:93:d5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8750  MAC: 00:50:56:86:87:50  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:2276  MAC: 00:50:56:86:22:76  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:238e  MAC: 00:50:56:86:23:8e  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:7323  MAC: 00:50:56:86:73:23  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:8f7f  MAC: 00:50:56:86:8f:7f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:ff58  MAC: 00:50:56:86:ff:58  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:b59c  MAC: 00:50:56:86:b5:9c  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:3892  MAC: 00:50:56:86:38:92  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:ab0f  MAC: 00:50:56:86:ab:0f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:6c32  MAC: 00:50:56:86:6c:32  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c843  MAC: 00:50:56:86:c8:43  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:e19d  MAC: 00:50:56:86:e1:9d  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c55f  MAC: 00:50:56:86:c5:5f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:c034  MAC: 00:50:56:86:c0:34  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4297  MAC: 00:50:56:86:42:97  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:9c1f  MAC: 00:50:56:86:9c:1f  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:43b5  MAC: 00:50:56:86:43:b5  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:1ccf  MAC: 00:50:56:86:1c:cf  IFACE: eth0
+|   IP: fe80::250:56ff:fe01:13d7  MAC: 00:50:56:01:13:d7  IFACE: eth0
+|   IP: fe80::250:56ff:fe86:4dcc  MAC: 00:50:56:86:4d:cc  IFACE: eth0
+|_  Use --script-args=newtargets to add the results as targets
+Nmap scan report for 10.25.100.24
+Host is up (0.00053s latency).
+Not shown: 65523 closed ports
+PORT      STATE SERVICE     VERSION
+22/tcp    open  ssh         OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.10
+| ssh-hostkey: 
+|   1024 0e:a1:19:a0:7e:41:24:a2:c8:72:ed:c3:b1:fb:45:42 (DSA)
+|   2048 3f:67:81:a4:99:56:04:53:d3:df:56:ad:c4:c7:04:66 (RSA)
+|   256 0f:6b:f7:69:4c:95:df:5a:e3:0e:df:95:7a:fd:0c:7c (ECDSA)
+|_  256 a7:4f:c3:7c:9c:e8:da:55:9d:6a:09:f5:31:e4:dc:02 (ED25519)
+| ssh2-enum-algos: 
+|   kex_algorithms: (8)
+|       curve25519-sha256@libssh.org
+|       ecdh-sha2-nistp256
+|       ecdh-sha2-nistp384
+|       ecdh-sha2-nistp521
+|       diffie-hellman-group-exchange-sha256
+|       diffie-hellman-group-exchange-sha1
+|       diffie-hellman-group14-sha1
+|       diffie-hellman-group1-sha1
+|   server_host_key_algorithms: (4)
+|       ssh-rsa
+|       ssh-dss
+|       ecdsa-sha2-nistp256
+|       ssh-ed25519
+|   encryption_algorithms: (16)
+|       aes128-ctr
+|       aes192-ctr
+|       aes256-ctr
+|       arcfour256
+|       arcfour128
+|       aes128-gcm@openssh.com
+|       aes256-gcm@openssh.com
+|       chacha20-poly1305@openssh.com
+|       aes128-cbc
+|       3des-cbc
+|       blowfish-cbc
+|       cast128-cbc
+|       aes192-cbc
+|       aes256-cbc
+|       arcfour
+|       rijndael-cbc@lysator.liu.se
+|   mac_algorithms: (19)
+|       hmac-md5-etm@openssh.com
+|       hmac-sha1-etm@openssh.com
+|       umac-64-etm@openssh.com
+|       umac-128-etm@openssh.com
+|       hmac-sha2-256-etm@openssh.com
+|       hmac-sha2-512-etm@openssh.com
+|       hmac-ripemd160-etm@openssh.com
+|       hmac-sha1-96-etm@openssh.com
+|       hmac-md5-96-etm@openssh.com
+|       hmac-md5
+|       hmac-sha1
+|       umac-64@openssh.com
+|       umac-128@openssh.com
+|       hmac-sha2-256
+|       hmac-sha2-512
+|       hmac-ripemd160
+|       hmac-ripemd160@openssh.com
+|       hmac-sha1-96
+|       hmac-md5-96
+|   compression_algorithms: (2)
+|       none
+|_      zlib@openssh.com
+80/tcp    open  http        Apache httpd 2.4.7
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.25.100.24
+|   url                                                         method
+|   http://10.25.100.24:80/drupal/                              FORM
+|   http://10.25.100.24:80/payroll_app.php                      FORM
+|   http://10.25.100.24:80/phpmyadmin/                          FORM
+|   http://10.25.100.24:80/drupal/?q=node&amp;destination=node  FORM
+|_  http://10.25.100.24:80/drupal/?q=node/1                     FORM
+|_http-chrono: Request times for /; avg: 345.15ms; min: 182.96ms; max: 480.72ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.25.100.24
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=node/1
+|     Line number: 113
+|     Comment: 
+|         <!-- /.section, /#sidebar-first -->
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 132
+|     Comment: 
+|         <!-- /.section, /#footer-wrapper -->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 283
+|     Comment: 
+|         /**
+|          * Get the text selection in a textarea.
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 225
+|     Comment: 
+|         /**
+|          * Generate the themed representation of a Drupal object.
+|          *
+|          * All requests for themed output must go through this function. It examines
+|          * the request and routes it to the appropriate theme function. If the current
+|          * theme does not provide an override function, the generic theme function is
+|          * called.
+|          *
+|          * For example, to retrieve the HTML for text that should be emphasized and
+|          * displayed as a placeholder inside a sentence, call
+|          * Drupal.theme('placeholder', text).
+|          *
+|          * @param func
+|          *   The name of the theme function to call.
+|          * @param ...
+|          *   Additional arguments to pass along to the theme function.
+|          * @return
+|          *   Any data the theme function returns. This could be a plain HTML string,
+|          *   but also a complex object.
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 343
+|     Comment: 
+|         
+|         // Class indicating that JS is enabled; used for styling purpose.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 293
+|     Comment: 
+|          // Now move 'dummy' end point to end point of original range.
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 130
+|     Comment: 
+|         <!-- /#footer -->
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 70
+|     Comment: 
+|         <!-- /#name-and-slogan -->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/jquery.js?v=1.4.4
+|     Line number: 2
+|     Comment: 
+|         /*!
+|          * jQuery JavaScript Library v1.4.4
+|          * http://jquery.com/
+|          *
+|          * Copyright 2010, John Resig
+|          * Dual licensed under the MIT or GPL Version 2 licenses.
+|          * http://jquery.org/license
+|          *
+|          * Includes Sizzle.js
+|          * http://sizzlejs.com/
+|          * Copyright 2010, The Dojo Foundation
+|          * Released under the MIT, BSD, and GPL Licenses.
+|          *
+|          * Date: Thu Nov 11 19:04:53 2010 -0500
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 288
+|     Comment: 
+|          // The current selection.
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 115
+|     Comment: 
+|         <!-- /#main, /#main-wrapper -->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 112
+|     Comment: 
+|         /**
+|          * Encode special characters in a plain-text string for display as HTML.
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 44
+|     Comment: 
+|         <!--
+|         jQuery.extend(Drupal.settings, {"basePath":"\/drupal\/","pathPrefix":"","ajaxPageState":{"theme":"bartik","theme_token":"CnPHTGX5YYFnbEKWy2J-Cp5zUz6IkSeK8LtDCXhFO9Y","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"themes\/bartik\/css\/layout.css":1,"themes\/bartik\/css\/style.css":1,"themes\/bartik\/css\/colors.css":1,"themes\/bartik\/css\/print.css":1,"themes\/bartik\/css\/ie.css":1,"themes\/bartik\/css\/ie6.css":1}}});
+|         //-->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 175
+|     Comment: 
+|         /**
+|          * Format a string containing a count of items.
+|          *
+|          * This function ensures that the string is pluralized correctly. Since Drupal.t() is
+|          * called by this function, make sure not to pass already-localized strings to it.
+|          *
+|          * See the documentation of the server-side format_plural() function for further details.
+|          *
+|          * @param count
+|          *   The item count to display.
+|          * @param singular
+|          *   The string for the singular case. Please make sure it is clear this is
+|          *   singular, to ease translation (e.g. use "1 new comment" instead of "1 new").
+|          *   Do not use @count in the singular string.
+|          * @param plural
+|          *   The string for the plural case. Please make sure it is clear this is plural,
+|          *   to ease translation. Use @count in place of the item count, as in "@count
+|          *   new comments".
+|          * @param args
+|          *   An object of replacements pairs to make after translation. Incidences
+|          *   of any key in this array are replaced with the corresponding value.
+|          *   Based on the first character of the key, the value is escaped and/or themed:
+|          *    - !variable: inserted as is
+|          *    - @variable: escape plain text to HTML (Drupal.checkPlain)
+|          *    - %variable: escape text and theme as a placeholder for user-submitted
+|          *      content (checkPlain + Drupal.theme('placeholder'))
+|          *   Note that you do not need to include @count in this array.
+|          *   This replacement is done automatically for the plural case.
+|          * @return
+|          *   A translated string.
+|          */
+|     
+|     Path: http://10.25.100.24:80/phpmyadmin/
+|     Line number: 29
+|     Comment: 
+|         
+|         //<![CDATA[
+|     
+|     Path: http://10.25.100.24:80/chat/
+|     Line number: 3
+|     Comment: 
+|         <!----
+|         This application was downloaded from the following, and modified:
+|         https://code.tutsplus.com/tutorials/how-to-create-a-simple-web-based-chat-application--net-5931
+|         ----->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 273
+|     Comment: 
+|         /**
+|          * Encodes a Drupal path for use in a URL.
+|          *
+|          * For aesthetic reasons slashes are not escaped.
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 319
+|     Comment: 
+|          // and the test causes an exception. So we need to catch the exception here.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/jquery.js?v=1.4.4
+|     Line number: 136
+|     Comment: 
+|         /*"}},ajax:function(a){var b=c.extend(true,{},c.ajaxSettings,a),d,e,f,h=b.type.toUpperCase(),l=qb.test(h);b.url=b.url.replace(ub,"");b.context=a&&a.context!=null?a.context:b;if(b.data&&b.processData&&typeof b.data!=="string")b.data=c.param(b.data,b.traditional);if(b.dataType==="jsonp"){if(h==="GET")T.test(b.url)||(b.url+=(ja.test(b.url)?"&":"?")+(b.jsonp||"callback")+"=?");else if(!b.data||
+|         !T.test(b.data))b.data=(b.data?b.data+"&":"")+(b.jsonp||"callback")+"=?";b.dataType="json"}if(b.dataType==="json"&&(b.data&&T.test(b.data)||T.test(b.url))){d=b.jsonpCallback||"jsonp"+mb++;if(b.data)b.data=(b.data+"").replace(T,"="+d+"$1");b.url=b.url.replace(T,"="+d+"$1");b.dataType="script";var k=E[d];E[d]=function(m){if(c.isFunction(k))k(m);else{E[d]=B;try{delete E[d]}catch(p){}}f=m;c.handleSuccess(b,w,e,f);c.handleComplete(b,w,e,f);r&&r.removeChild(A)}}if(b.dataType==="script"&&b.cache===null)b.cache=
+|         false;if(b.cache===false&&l){var o=c.now(),x=b.url.replace(rb,"$1_="+o);b.url=x+(x===b.url?(ja.test(b.url)?"&":"?")+"_="+o:"")}if(b.data&&l)b.url+=(ja.test(b.url)?"&":"?")+b.data;b.global&&c.active++===0&&c.event.trigger("ajaxStart");o=(o=sb.exec(b.url))&&(o[1]&&o[1].toLowerCase()!==location.protocol||o[2].toLowerCase()!==location.host);if(b.dataType==="script"&&h==="GET"&&o){var r=t.getElementsByTagName("head")[0]||t.documentElement,A=t.createElement("script");if(b.scriptCharset)A.charset=b.scriptCharset;
+|         A.src=b.url;if(!d){var C=false;A.onload=A.onreadystatechange=function(){if(!C&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){C=true;c.handleSuccess(b,w,e,f);c.handleComplete(b,w,e,f);A.onload=A.onreadystatechange=null;r&&A.parentNode&&r.removeChild(A)}}}r.insertBefore(A,r.firstChild);return B}var J=false,w=b.xhr();if(w){b.username?w.open(h,b.url,b.async,b.username,b.password):w.open(h,b.url,b.async);try{if(b.data!=null&&!l||a&&a.contentType)w.setRequestHeader("Content-Type",
+|         b.contentType);if(b.ifModified){c.lastModified[b.url]&&w.setRequestHeader("If-Modified-Since",c.lastModified[b.url]);c.etag[b.url]&&w.setRequestHeader("If-None-Match",c.etag[b.url])}o||w.setRequestHeader("X-Requested-With","XMLHttpRequest");w.setRequestHeader("Accept",b.dataType&&b.accepts[b.dataType]?b.accepts[b.dataType]+", */
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 317
+|     Comment: 
+|          // In some cases, when statusCode == 0, xmlhttp.statusText may not be defined.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 368
+|     Comment: 
+|         /**
+|          * The default themes.
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=node&amp;destination=node
+|     Line number: 88
+|     Comment: 
+|         <!-- /.section, /#messages -->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 156
+|     Comment: 
+|          // Escaped only.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 336
+|     Comment: 
+|          // We don't need readyState except for status == 0.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 332
+|     Comment: 
+|          // Make the responseText more readable by stripping HTML tags and newlines.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 327
+|     Comment: 
+|          // xmlhttp.responseText is going to throw an exception. So we'll catch it.
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 33
+|     Comment: 
+|         <!--[if lte IE 7]>
+|         <link type="text/css" rel="stylesheet" href="http://10.25.100.24/drupal/themes/bartik/css/ie.css?or3865" media="all" />
+|         <![endif]-->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 128
+|     Comment: 
+|         /**
+|          * Translate strings to the page language or a given language.
+|          *
+|          * See the documentation of the server-side t() function for further details.
+|          *
+|          * @param str
+|          *   A string containing the English string to translate.
+|          * @param args
+|          *   An object of replacements pairs to make after translation. Incidences
+|          *   of any key in this array are replaced with the corresponding value.
+|          *   Based on the first character of the key, the value is escaped and/or themed:
+|          *    - !variable: inserted as is
+|          *    - @variable: escape plain text to HTML (Drupal.checkPlain)
+|          *    - %variable: escape text and theme as a placeholder for user-submitted
+|          *      content (checkPlain + Drupal.theme('placeholder'))
+|          * @return
+|          *   The translated string.
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 153
+|     Comment: 
+|          // Transform arguments before inserting them.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 353
+|     Comment: 
+|         /**
+|            * Boolean indicating whether or not position:fixed is supported.
+|            */
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 326
+|     Comment: 
+|          // Again, we don't have a way to know for sure whether accessing
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 160
+|     Comment: 
+|          // Pass-through.
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 79
+|     Comment: 
+|         <!-- /.section, /#header -->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 295
+|     Comment: 
+|          // Now we can calculate start and end points.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 163
+|     Comment: 
+|          // Escaped and placeholder.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 318
+|     Comment: 
+|          // Unfortunately, testing for it with typeof, etc, doesn't seem to catch that
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 76
+|     Comment: 
+|         <!-- /#main-menu -->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 291
+|     Comment: 
+|          // Select all text.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 209
+|     Comment: 
+|          // Determine the index of the plural form.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 346
+|     Comment: 
+|         
+|         // 'js enabled' cookie.
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 112
+|     Comment: 
+|         <!-- /.section, /#content -->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 9
+|     Comment: 
+|         /**
+|          * Attach all registered behaviors to a page element.
+|          *
+|          * Behaviors are event-triggered actions that attach to page elements, enhancing
+|          * default non-JavaScript UIs. Behaviors are registered in the Drupal.behaviors
+|          * object using the method 'attach' and optionally also 'detach' as follows:
+|          * @code
+|          *    Drupal.behaviors.behaviorName = {
+|          *      attach: function (context, settings) {
+|          *        ...
+|          *      },
+|          *      detach: function (context, settings, trigger) {
+|          *        ...
+|          *      }
+|          *    };
+|          * @endcode
+|          *
+|          * Drupal.attachBehaviors is added below to the jQuery ready event and so
+|          * runs on initial page load. Developers implementing AHAH/Ajax in their
+|          * solutions should also call this function after new page content has been
+|          * loaded, feeding in an element to be processed, in order to attach all
+|          * behaviors to the new content.
+|          *
+|          * Behaviors should use
+|          * @code
+|          *   $(selector).once('behavior-name', function () {
+|          *     ...
+|          *   });
+|          * @endcode
+|          * to ensure the behavior is attached only once to a given element. (Doing so
+|          * enables the reprocessing of given elements, which may be needed on occasion
+|          * despite the ability to limit behavior attachment to a particular element.)
+|          *
+|          * @param context
+|          *   An element to attach behaviors to. If none is given, the document element
+|          *   is used.
+|          * @param settings
+|          *   An object containing settings for the current context. If none given, the
+|          *   global Drupal.settings object is used.
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 37
+|     Comment: 
+|         <!--[if IE 6]>
+|         <link type="text/css" rel="stylesheet" href="http://10.25.100.24/drupal/themes/bartik/css/ie6.css?or3865" media="all" />
+|         <![endif]-->
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 134
+|     Comment: 
+|         <!-- /#page, /#page-wrapper -->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 147
+|     Comment: 
+|          // Fetch the localized version of the string.
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 266
+|     Comment: 
+|         /**
+|          * Unfreeze the body height.
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 373
+|     Comment: 
+|         /**
+|            * Formats text for emphasized display in a placeholder inside a sentence.
+|            *
+|            * @param str
+|            *   The text to format (plain-text).
+|            * @return
+|            *   The formatted text (html).
+|            */
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 44
+|     Comment: 
+|         <!--//-->
+|     
+|     Path: http://10.25.100.24:80/phpmyadmin/
+|     Line number: 99
+|     Comment: 
+|         <!-- Login form -->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 303
+|     Comment: 
+|         /**
+|          * Build an error message from an Ajax response.
+|          */
+|     
+|     Path: http://10.25.100.24:80/phpmyadmin/
+|     Line number: 26
+|     Comment: 
+|         
+|         // ]]>
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 349
+|     Comment: 
+|         /**
+|          * Additions to jQuery.support.
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 60
+|     Comment: 
+|         /**
+|          * Detach registered behaviors from a page element.
+|          *
+|          * Developers implementing AHAH/Ajax in their solutions should call this
+|          * function before page content is about to be removed, feeding in an element
+|          * to be processed, in order to allow special behaviors to detach from the
+|          * content.
+|          *
+|          * Such implementations should look for the class name that was added in their
+|          * corresponding Drupal.behaviors.behaviorName.attach implementation, i.e.
+|          * behaviorName-processed, to ensure the behavior is detached only from
+|          * previously processed elements.
+|          *
+|          * @param context
+|          *   An element to detach behaviors from. If none is given, the document element
+|          *   is used.
+|          * @param settings
+|          *   An object containing settings for the current context. If none given, the
+|          *   global Drupal.settings object is used.
+|          * @param trigger
+|          *   A string containing what's causing the behaviors to be detached. The
+|          *   possible triggers are:
+|          *   - unload: (default) The context element is being removed from the DOM.
+|          *   - move: The element is about to be moved within the DOM (for example,
+|          *     during a tabledrag row swap). After the move is completed,
+|          *     Drupal.attachBehaviors() is called, so that the behavior can undo
+|          *     whatever it did in response to the move. Many behaviors won't need to
+|          *     do anything simply in response to the element being moved, but because
+|          *     IFRAME elements reload their "src" when being moved within the DOM,
+|          *     behaviors bound to IFRAME elements (like WYSIWYG editors) may need to
+|          *     take some action.
+|          *   - serialize: When an Ajax form is submitted, this is called with the
+|          *     form as the context. This provides every behavior within the form an
+|          *     opportunity to ensure that the field elements have correct content
+|          *     in them before the form is serialized. The canonical use-case is so
+|          *     that WYSIWYG editors can update the hidden textarea to which they are
+|          *     bound.
+|          *
+|          * @see Drupal.attachBehaviors
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 4
+|     Comment: 
+|         
+|         // Allow other JavaScript libraries to use $.
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=node/1
+|     Line number: 48
+|     Comment: 
+|         <!--
+|         jQuery.extend(Drupal.settings, {"basePath":"\/drupal\/","pathPrefix":"","ajaxPageState":{"theme":"bartik","theme_token":"USUJdeoUB-VIDCTc5gl7HIcXV9uP5hO7VlLhIqZX450","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"themes\/bartik\/css\/layout.css":1,"themes\/bartik\/css\/style.css":1,"themes\/bartik\/css\/colors.css":1,"themes\/bartik\/css\/print.css":1,"themes\/bartik\/css\/ie.css":1,"themes\/bartik\/css\/ie6.css":1}}});
+|         //-->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 363
+|     Comment: 
+|         
+|         //Attach all behaviors.
+|     
+|     Path: http://10.25.100.24:80/phpmyadmin/
+|     Line number: 21
+|     Comment: 
+|         
+|         // <![CDATA[
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 52
+|     Comment: 
+|          // Execute all of them.
+|     
+|     Path: http://10.25.100.24:80/drupal/
+|     Line number: 45
+|     Comment: 
+|         <!--
+|         jQuery.extend(Drupal.settings, {"basePath":"\/drupal\/","pathPrefix":"","ajaxPageState":{"theme":"bartik","theme_token":"a2YdRygBrpvYropTi_Uf9iRgL6Roy751eKTY3pyjOf0","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"themes\/bartik\/css\/layout.css":1,"themes\/bartik\/css\/style.css":1,"themes\/bartik\/css\/colors.css":1,"themes\/bartik\/css\/print.css":1,"themes\/bartik\/css\/ie.css":1,"themes\/bartik\/css\/ie6.css":1}}});
+|         //-->
+|     
+|     Path: http://10.25.100.24:80/drupal/misc/drupal.js?or3865
+|     Line number: 251
+|     Comment: 
+|         /**
+|          * Freeze the current body height (as minimum height). Used to prevent
+|          * unnecessary upwards scrolling when doing DOM manipulations.
+|          */
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Line number: 46
+|     Comment: 
+|         
+|         //--><!]]>
+|     
+|     Path: http://10.25.100.24:80/phpmyadmin/
+|     Line number: 34
+|     Comment: 
+|         
+|         //]]>
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=node&amp;destination=node
+|     Line number: 45
+|     Comment: 
+|         <!--
+|         jQuery.extend(Drupal.settings, {"basePath":"\/drupal\/","pathPrefix":"","ajaxPageState":{"theme":"bartik","theme_token":"aQF1tGXMlQa31062LCkZlJO7V5YYltUT5gko3DqOPQs","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"themes\/bartik\/css\/layout.css":1,"themes\/bartik\/css\/style.css":1,"themes\/bartik\/css\/colors.css":1,"themes\/bartik\/css\/print.css":1,"themes\/bartik\/css\/ie.css":1,"themes\/bartik\/css\/ie6.css":1}}});
+|_        //-->
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.25.100.24
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.25.100.24:80/drupal/
+|     Form id: user-login-form
+|     Form action: /drupal/?q=node&destination=node
+|     
+|     Path: http://10.25.100.24:80/payroll_app.php
+|     Form id: 
+|     Form action: 
+|     
+|     Path: http://10.25.100.24:80/chat/
+|     Form id: name
+|     Form action: index.php
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=node&amp;destination=node
+|     Form id: user-login-form
+|     Form action: /drupal/?q=node&destination=node%3Famp%253Bdestination%3Dnode
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=node/1
+|     Form id: user-login-form
+|     Form action: /drupal/?q=node/1&destination=node/1
+|     
+|     Path: http://10.25.100.24:80/drupal/?q=user/password
+|     Form id: user-pass
+|_    Form action: /drupal/?q=user/password
+|_http-date: Tue, 11 Aug 2020 03:37:02 GMT; -1s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /: Root directory w/ listing on 'apache/2.4.7 (ubuntu)'
+|   /phpmyadmin/: phpMyAdmin
+|_  /uploads/: Potentially interesting directory w/ listing on 'apache/2.4.7 (ubuntu)'
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=10.25.100.24
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://10.25.100.24:80/phpmyadmin/location;
+| http-feed: 
+| Spidering limited to: maxpagecount=40; withinhost=10.25.100.24
+|   Found the following feeds: 
+|     RSS (version 2.0): http://10.25.100.24/drupal/?q=rss.xml
+|_    RSS (version 2.0): http://10.25.100.24:80/drupal/?q=rss.xml
+| http-grep: 
+|   (1) http://10.25.100.24:80/: 
+|     (1) ip: 
+|_      + 10.25.100.24
+| http-headers: 
+|   Date: Tue, 11 Aug 2020 03:37:02 GMT
+|   Server: Apache/2.4.7 (Ubuntu)
+|   Connection: close
+|   Content-Type: text/html;charset=UTF-8
+|   
+|_  (Request type: HEAD)
+| http-ls: Volume /
+| SIZE  TIME              FILENAME
+| -     2018-03-17 19:04  chat/
+| -     2011-07-27 20:17  drupal/
+| 1.7K  2018-03-17 19:04  payroll_app.php
+| -     2013-04-08 12:06  phpmyadmin/
+|_
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; php: 1
+|     /chat/
+|       Other: 1; css: 1; php: 1
+|     /drupal/
+|       Other: 1
+|     /drupal/misc/
+|       ico: 1; js: 1
+|     /icons/
+|       gif: 3
+|     /phpmyadmin/
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 2
+|     Dir: /drupal/misc/
+|   Total files found (by extension):
+|_    Other: 4; css: 1; gif: 3; ico: 1; js: 1; php: 2
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+|_      http://ha.ckers.org/slowloris/
+| http-sql-injection: 
+|   Possible sqli for queries:
+|     http://10.25.100.24:80/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=N%3bO%3dD%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=S%3bO%3dD%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=N%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=D%3bO%3dD%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=N%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=S%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=D%3bO%3dA%27%20OR%20sqlspider
+|     http://10.25.100.24:80/?C=M%3bO%3dD%27%20OR%20sqlspider
+|_    http://10.25.100.24:80/?C=N%3bO%3dA%27%20OR%20sqlspider
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Index of /
+| http-traceroute: 
+|_  Possible reverse proxy detected.
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-xssed: No previously reported XSS vuln.
+111/tcp   open  rpcbind     2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          41854/udp  status
+|_  100024  1          55082/tcp  status
+139/tcp   open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp   open  netbios-ssn Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
+3306/tcp  open  mysql       MySQL (unauthorized)
+| banner: E\x00\x00\x00\xFFj\x04Host '10.25.100.23' is not allowed to con
+|_nect to this MySQL server
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+6667/tcp  open  irc?
+|_irc-info: Unable to open connection
+6697/tcp  open  ircs-u?
+|_irc-info: Unable to open connection
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+|_sslv2-drown: 
+8067/tcp  open  infi-async?
+|_irc-info: Unable to open connection
+8080/tcp  open  http        Jetty 8.1.7.v20120910
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.25.100.24
+|   url                                                                                                     method
+|   http://10.25.100.24:8080/continuum/security/login.action;jsessionid=5e7c7hd8o6jlvaf8zlih3u56            FORM
+|   http://10.25.100.24:8080/continuum/security/login_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7     FORM
+|   http://10.25.100.24:8080/continuum/security/login.action;jsessionid=c40pbjdo20fot34erfpqqko7            FORM
+|   http://10.25.100.24:8080/continuum/security/login.action;jsessionid=5e7c7hd8o6jlvaf8zlih3u56            FORM
+|   http://10.25.100.24:8080/continuum/security/login.action;jsessionid=5e7c7hd8o6jlvaf8zlih3u56            FORM
+|_  http://10.25.100.24:8080/continuum/security/register_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7  FORM
+|_http-chrono: Request times for /; avg: 3760.10ms; min: 204.27ms; max: 17697.81ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.25.100.24
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2104
+|     Comment: 
+|          // page is scrolled
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2244
+|     Comment: 
+|          // position:absolute needs offsetParent deltas
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/print.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 20
+|     Comment: 
+|         /* $Id: print.css 492561 2007-01-04 13:35:53Z evenisse $ */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1813
+|     Comment: 
+|          //  element.select();
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 989
+|     Comment: 
+|         /* CSS sibling selector - highlight error text input */
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 977
+|     Comment: 
+|         /*
+|         * Some extensions
+|         */
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 867
+|     Comment: 
+|         /* hide from macie5\*/
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1272
+|     Comment: 
+|          // so enable the element temporarily
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2100
+|     Comment: 
+|          // scrollable elements
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 869
+|     Comment: 
+|         /* resume */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1293
+|     Comment: 
+|          // Opera returns the offset relative to the positioning context, when an
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1812
+|     Comment: 
+|          //if (element.select)
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2208
+|     Comment: 
+|          // Safari fix
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 405
+|     Comment: 
+|         /* font and text properties, exclusive of link indication, alignment, text-indent */
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 113
+|     Comment: 
+|         /*text-decoration: underline;*/
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 145
+|     Comment: 
+|         /*}
+|         
+|         .toolgroup {
+|         	background: #efefef;
+|         }
+|         
+|         .toolgroup .label {
+|         	border-bottom: 1px solid #666;
+|         	border-right: 1px solid #666;
+|         	background: #ddd;
+|         	color: #555; */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 849
+|     Comment: 
+|          // avoid memory leak in MSIE: clean up
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 112
+|     Comment: 
+|         /* TODO was #fff causing white on white issues for me, so set it black */
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/extremecomponents.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 130
+|     Comment: 
+|         /*
+|         	font-family: verdana, arial, helvetica, sans-serif;
+|         	font-size: 9px;
+|         	margin-right: 1px;
+|         	border-right: 1px solid silver;
+|         	border-left: 1px solid silver;
+|         	border-top: 1px solid silver;
+|         	border-bottom: 1px solid silver;
+|         */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2103
+|     Comment: 
+|          // must be called before calling withinIncludingScrolloffset, every time the
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 988
+|     Comment: 
+|         /*[contains(concat(' ', @class, ' '), ' " + className + " ')]";
+|             return document._getElementsByXPath(q, parentElement);
+|           } else {
+|             var children = ($(parentElement) || document.body).getElementsByTagName('*');
+|             var elements = [], child;
+|             for (var i = 0, length = children.length; i < length; i++) {
+|               child = children[i];
+|               if (Element.hasClassName(child, className))
+|                 elements.push(Element.extend(child));
+|             }
+|             return elements;
+|           }
+|         }
+|         
+|         /*--------------------------------------------------------------------------*/
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2302
+|     Comment: 
+|         
+|         // Safari returns margins on body which is incorrect if the child is absolutely
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 23
+|     Comment: 
+|         /* colors, backgrounds, borders, link indication */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1294
+|     Comment: 
+|          // element is position relative but top and left have not been defined
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1271
+|     Comment: 
+|          // All *Width and *Height properties give 0 on elements with display none,
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/print.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1
+|     Comment: 
+|         /*
+|          * Licensed to the Apache Software Foundation (ASF) under one
+|          * or more contributor license agreements.  See the NOTICE file
+|          * distributed with this work for additional information
+|          * regarding copyright ownership.  The ASF licenses this file
+|          * to you under the Apache License, Version 2.0 (the
+|          * "License"); you may not use this file except in compliance
+|          * with the License.  You may obtain a copy of the License at
+|          *
+|          *   http://www.apache.org/licenses/LICENSE-2.0
+|          *
+|          * Unless required by applicable law or agreed to in writing,
+|          * software distributed under the License is distributed on an
+|          * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+|          * KIND, either express or implied.  See the License for the
+|          * specific language governing permissions and limitations
+|          * under the License.
+|          */
+|     
+|     Path: http://10.25.100.24:8080/continuum/struts/utils.js
+|     Line number: 70
+|     Comment: 
+|          // ie hack cause ie does not support setAttribute
+|     
+|     Path: http://10.25.100.24:8080/continuum/struts/utils.js
+|     Line number: 61
+|     Comment: 
+|         
+|         // shows validation errors using functions from xhtml/validation.js
+|     
+|     Path: http://10.25.100.24:8080/continuum/struts/utils.js
+|     Line number: 51
+|     Comment: 
+|          //clear previous global error messages
+|     
+|     Path: http://10.25.100.24:8080/continuum/struts/utils.js
+|     Line number: 24
+|     Comment: 
+|         
+|         // gets an object with validation errors from string returned by 
+|     
+|     Path: http://10.25.100.24:8080/continuum/struts/utils.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|          * $Id$
+|          *
+|          * Licensed to the Apache Software Foundation (ASF) under one
+|          * or more contributor license agreements.  See the NOTICE file
+|          * distributed with this work for additional information
+|          * regarding copyright ownership.  The ASF licenses this file
+|          * to you under the Apache License, Version 2.0 (the
+|          * "License"); you may not use this file except in compliance
+|          * with the License.  You may obtain a copy of the License at
+|          *
+|          *  http://www.apache.org/licenses/LICENSE-2.0
+|          *
+|          * Unless required by applicable law or agreed to in writing,
+|          * software distributed under the License is distributed on an
+|          * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+|          * KIND, either express or implied.  See the License for the
+|          * specific language governing permissions and limitations
+|          * under the License.
+|          */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2099
+|     Comment: 
+|          // NOT neeeded for page scrolling, only if draggable contained in
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2304
+|     Comment: 
+|         
+|         // KHTML/WebKit only.
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/extremecomponents.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 143
+|     Comment: 
+|         /*
+|         	padding: 0px 3px 0px 3px;
+|         	text-align:center;
+|         */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2256
+|     Comment: 
+|          // set position
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2032
+|     Comment: 
+|          // node the event was triggered on; traverses the DOM upwards
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2162
+|     Comment: 
+|          // caches x/y coordinate pair to use with overlap
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2243
+|     Comment: 
+|          // delta [0,0] will do fine with position: fixed elements,
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1340
+|     Comment: 
+|         
+|         // IE is missing .innerHTML support for TABLE-related elements
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2239
+|     Comment: 
+|          // find coordinate system to use
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1866
+|     Comment: 
+|          // Uses the new potential extension if hasAttribute isn't native.
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2235
+|     Comment: 
+|          // find page position of source
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 489
+|     Comment: 
+|         /* box properties (exclusive of borders), positioning, alignments, list types, text-indent */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2189
+|     Comment: 
+|          // within must be called directly before
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 768
+|     Comment: 
+|         /* Force Firefox to handle ready state 4 for synchronous requests */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 745
+|     Comment: 
+|          // when GET, append parameters to URL
+|     
+|     Path: http://10.25.100.24:8080/continuum/css/tigris.css;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 20
+|     Comment: 
+|         /* $Id: tigris.css 1596252 2014-05-20 14:02:03Z brett $
+|         	
+|         	This file defines basic default formatting for HTML conforming to Tigris application style. To extend or override these rules for your instance, edit inst.css instead of this file. */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2031
+|     Comment: 
+|          // find the first node with the given tagName, starting from the
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 7
+|     Comment: 
+|         /*--------------------------------------------------------------------------*/
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2250
+|     Comment: 
+|          // correct by body offsets (fixes Safari)
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 738
+|     Comment: 
+|          // simulate other verbs over post
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/passwordReset_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 213
+|     Comment: 
+|         <!--
+|             if ( document.forms[0] )
+|             {
+|                 if ( Form.findFirstElement( document.forms[0] ) )
+|                 {
+|                     Form.focusFirstElement( document.forms[0] ).activate;
+|                 }
+|             }
+|             -->
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1209
+|     Comment: 
+|          // removes whitespace-only text node children
+|     
+|     Path: http://10.25.100.24:8080/
+|     Line number: 8
+|     Comment: 
+|         <!-- Padding for IE                  -->
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2098
+|     Comment: 
+|          // set to true if needed, warning: firefox performance problems
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 803
+|     Comment: 
+|          // user-defined headers
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 787
+|     Comment: 
+|         /*'
+|             };
+|         
+|             if (this.options.method == 'post') {
+|               headers['Content-type'] = this.options.contentType +
+|                 (this.options.encoding ? '; charset=' + this.options.encoding : '');
+|         
+|               /* Force "Connection: close" for older Mozilla browsers to work
+|                * around a bug where XMLHttpRequest sends an incorrect
+|                * Content-length header. See Mozilla Bugzilla #246651.
+|                */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1
+|     Comment: 
+|         /*  Prototype JavaScript framework, version 1.5.0_rc1
+|          *  (c) 2005 Sam Stephenson <sam@conio.net>
+|          *
+|          *  Prototype is freely distributable under the terms of an MIT-style license.
+|          *  For details, see the Prototype web site: http://prototype.conio.net/
+|          *
+|         /*--------------------------------------------------------------------------*/
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 2094
+|     Comment: 
+|         /* prevent memory leaks in IE */
+|     
+|     Path: http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Line number: 1789
+|     Comment: 
+|_        /* m\xE9thode notamment appel\xE9e lors de l'utilisation de $F() */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.25.100.24
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/login.action;jsessionid=5e7c7hd8o6jlvaf8zlih3u56
+|     Form id: loginform
+|     Form action: /continuum/security/login_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/register.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Form id: registerform
+|     Form action: /continuum/security/register_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/login_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Form id: loginform
+|     Form action: /continuum/security/login_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/login.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Form id: loginform
+|     Form action: /continuum/security/login_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/passwordReset.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Form id: passwordresetform
+|     Form action: /continuum/security/passwordReset_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/login.action;jsessionid=1gku53o7kbap1fp509e2t6uzd
+|     Form id: loginform
+|     Form action: /continuum/security/login_submit.action;jsessionid=7ls0uir7z0mh1fqf3fsl35ey
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/login.action;jsessionid=1gku53o7kbap1fp509e2t6uzd
+|     Form id: loginform
+|     Form action: /continuum/security/login_submit.action;jsessionid=7ls0uir7z0mh1fqf3fsl35ey
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/register_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Form id: registerform
+|     Form action: /continuum/security/register_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/passwordReset_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     Form id: passwordresetform
+|     Form action: /continuum/security/passwordReset_submit.action;jsessionid=c40pbjdo20fot34erfpqqko7
+|     
+|     Path: http://10.25.100.24:8080/continuum/security/login_submit.action;jsessionid=7ls0uir7z0mh1fqf3fsl35ey
+|     Form id: loginform
+|_    Form action: /continuum/security/login_submit.action;jsessionid=7ls0uir7z0mh1fqf3fsl35ey
+|_http-date: Tue, 11 Aug 2020 03:36:20 GMT; -1s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=10.25.100.24
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://10.25.100.24:8080/
+|_http-favicon: Unknown favicon MD5: ED7D5C39C69262F4BA95418D4F909B10
+|_http-feed: Couldn't find any feeds.
+| http-grep: 
+|   (1) http://10.25.100.24:8080/continuum/js/prototype.js;jsessionid=c40pbjdo20fot34erfpqqko7: 
+|     (1) email: 
+|_      + sam@conio.net
+| http-headers: 
+|   Date: Tue, 11 Aug 2020 03:36:52 GMT
+|   Content-Type: text/html
+|   Content-Length: 795
+|   Connection: close
+|   Server: Jetty(8.1.7.v20120910)
+|   
+|_  (Request type: GET)
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: must-revalidate,no-cache,no-store
+|_http-server-header: Jetty(8.1.7.v20120910)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /continuum/
+|       ico: 1
+|     /continuum/css/
+|       css: 3
+|     /continuum/images/
+|       gif: 1
+|     /continuum/js/
+|       js: 1
+|     /continuum/security/
+|       action: 4
+|     /continuum/struts/
+|       js: 1
+|     /continuum/struts/xhtml/
+|       css: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /continuum/struts/xhtml/
+|   Total files found (by extension):
+|_    action: 4; css: 4; gif: 1; ico: 1; js: 2
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Error 404 - Not Found
+| http-traceroute: 
+|_  Possible reverse proxy detected.
+| http-useragent-tester: 
+|   Status for browser useragent: 404
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 404
+|_http-xssed: No previously reported XSS vuln.
+8181/tcp  open  http        WEBrick httpd 1.3.1 (Ruby 2.3.6 (2017-12-14))
+|_http-chrono: Request times for /; avg: 236.70ms; min: 199.44ms; max: 276.98ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Tue, 11 Aug 2020 03:36:28 GMT; -1s from local time.
+|_http-devframework: ASP.NET detected. Found related header.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+| http-headers: 
+|   Content-Type: text/html;charset=utf-8
+|   Content-Length: 132
+|   X-Xss-Protection: 1; mode=block
+|   X-Content-Type-Options: nosniff
+|   X-Frame-Options: SAMEORIGIN
+|   Server: WEBrick/1.3.1 (Ruby/2.3.6/2017-12-14)
+|   Date: Tue, 11 Aug 2020 03:36:20 GMT
+|   Connection: close
+|   Set-Cookie: _metasploitable=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRWI4ZmI0NTM2NjgwYzM5ZDEyYTM4%0AZjNjZTQyMDA4NmEwYzg4MmFlYTU4NzJhM2QyNTBjN2QxNzFjMDk2YTk5MjYG%0AOwBGSSIUX21ldGFzcGxvaXRhYmxlBjsAVEkiVFNoaGhoaCwgZG9uJ3QgdGVs%0AbCBhbnlib2R5IHRoaXMgY29va2llIHNlY3JldDogYTdhZWJjMjg3YmJhMGVl%0ANGU2NGY5NDc0MTVhOTRlNWYGOwBU%0A--e24ddb5f09ce888f36b88cadde08fcf1f8228aca; path=/; expires=Tue, 11 Aug 2020 04:06:20 -0000; HttpOnly
+|   
+|_  (Request type: HEAD)
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   X_Frame_Options: 
+|     Header: X-Frame-Options: SAMEORIGIN
+|     Description: The browser must not display this content in any frame from a page of different origin than the content itself.
+|   X_XSS_Protection: 
+|     Header: X-XSS-Protection: 1; mode=block
+|     Description: The browser will prevent the rendering of the page when XSS is detected.
+|   X_Content_Type_Options: 
+|     Header: X-Content-Type-Options: nosniff
+|_    Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. 
+|_http-server-header: WEBrick/1.3.1 (Ruby/2.3.6/2017-12-14)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 2
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 2
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+|_      http://ha.ckers.org/slowloris/
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Site doesn't have a title (text/html;charset=utf-8).
+| http-traceroute: 
+|_  Possible reverse proxy detected.
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-xssed: No previously reported XSS vuln.
+55082/tcp open  status      1 (RPC #100024)
+MAC Address: 00:50:56:86:C5:5F (VMware)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.10 - 4.11
+Uptime guess: 0.203 days (since Tue Aug 11 10:49:48 2020)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=251 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Hosts: 127.0.0.1, DEATH-STAR; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_dns-brute: Can't guess domain of "10.25.100.24"; use dns-brute.domain script argument.
+|_fcrdns: FAIL (No PTR record)
+|_ipidseq: All zeros
+|_msrpc-enum: NT_STATUS_OBJECT_NAME_NOT_FOUND
+| nbstat: NetBIOS name: DEATH-STAR, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   DEATH-STAR<00>       Flags: <unique><active>
+|   DEATH-STAR<03>       Flags: <unique><active>
+|   DEATH-STAR<20>       Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+|_path-mtu: PMTU == 1500
+| qscan: 
+| PORT  FAMILY  MEAN (us)  STDDEV  LOSS (%)
+| 1     0       546.50     61.83   0.0%
+| 22    0       560.30     114.65  0.0%
+| 80    0       540.40     64.26   0.0%
+| 111   0       513.70     89.07   0.0%
+| 139   0       576.89     46.17   10.0%
+| 445   0       540.70     42.34   0.0%
+| 3306  0       514.10     34.27   0.0%
+| 6667  0       546.10     45.70   0.0%
+|_6697  0       550.00     63.14   0.0%
+| smb-enum-domains: 
+|   Builtin
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|     Account lockout disabled
+|   DEATH-STAR
+|     Groups: n/a
+|     Users: chewbacca
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|_    Account lockout disabled
+| smb-enum-sessions: 
+|_  <nobody>
+| smb-enum-shares: 
+|   account_used: guest
+|   \\10.25.100.24\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (death-star server (Samba, Ubuntu))
+|     Users: 3
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\10.25.100.24\print$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Printer Drivers
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.25.100.24\public: 
+|     Type: STYPE_DISKTREE
+|     Comment: WWW
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\var\www\html\
+|     Anonymous access: <none>
+|_    Current user access: <none>
+| smb-mbenum: 
+|   DFS Root
+|     DEATH-STAR  0.0  death-star server (Samba, Ubuntu)
+|     UBUNTU      0.0  ubuntu server (Samba, Ubuntu)
+|   Master Browser
+|     UBUNTU  0.0  ubuntu server (Samba, Ubuntu)
+|   Potential Browser
+|     DEATH-STAR  0.0  death-star server (Samba, Ubuntu)
+|   Print server
+|     DEATH-STAR  0.0  death-star server (Samba, Ubuntu)
+|     UBUNTU      0.0  ubuntu server (Samba, Ubuntu)
+|   Server
+|     DEATH-STAR  0.0  death-star server (Samba, Ubuntu)
+|     UBUNTU      0.0  ubuntu server (Samba, Ubuntu)
+|   Server service
+|     DEATH-STAR  0.0  death-star server (Samba, Ubuntu)
+|     UBUNTU      0.0  ubuntu server (Samba, Ubuntu)
+|   Unix server
+|     DEATH-STAR  0.0  death-star server (Samba, Ubuntu)
+|     UBUNTU      0.0  ubuntu server (Samba, Ubuntu)
+|   Windows NT/2000/XP/2003 server
+|     DEATH-STAR  0.0  death-star server (Samba, Ubuntu)
+|     UBUNTU      0.0  ubuntu server (Samba, Ubuntu)
+|   Workstation
+|     DEATH-STAR  0.0  death-star server (Samba, Ubuntu)
+|_    UBUNTU      0.0  ubuntu server (Samba, Ubuntu)
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: death-star
+|   NetBIOS computer name: DEATH-STAR\x00
+|   Domain name: \x00
+|   FQDN: death-star
+|_  System time: 2020-08-11T03:36:30+00:00
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|     3.00
+|     3.02
+|_    3.11
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: false
+| smb-vuln-regsvc-dos: 
+|   VULNERABLE:
+|   Service regsvc in Microsoft Windows systems vulnerable to denial of service
+|     State: VULNERABLE
+|       The service regsvc in Microsoft Windows 2000 systems is vulnerable to denial of service caused by a null deference
+|       pointer. This script will crash the service if it is vulnerable. This vulnerability was discovered by Ron Bowes
+|       while working on smb-enum-sessions.
+|_          
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Multi-credit operations
+|   3.00: 
+|     Distributed File System
+|     Multi-credit operations
+|   3.02: 
+|     Distributed File System
+|     Multi-credit operations
+|   3.11: 
+|     Distributed File System
+|_    Multi-credit operations
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-08-11 15:36:53
+|_  start_date: N/A
+| traceroute-geolocation: 
+|   HOP  RTT   ADDRESS       GEOLOCATION
+|_  1    0.53  10.25.100.24  - ,- 
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.53 ms 10.25.100.24
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Aug 11 15:42:36 2020 -- 1 IP address (1 host up) scanned in 563.06 seconds
