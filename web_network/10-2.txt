@@ -1,0 +1,19 @@
+c.
+    i.
+        The content isn't over HTTPS, only HTTP. This means page content and login tokens can be snooped on. 
+    ii.
+        An attacker could simply just steal the login token as it is in cleartext.
+    iii.
+        Using a VPN, so all traffic from the computer will be sent through an encrypted tunnel and come from a server elsewhere, meaning someone sniffing wifi traffic or tapping a switch can't see that content.
+    iv.
+        The user goes to the facebook home page and scrolls down to trigger the infinite scroll content filling.
+        The user clicks on an image to view it.
+        The user types the "zakir" search bar and clicks on the profile suggestion: "Zakir Durumeriç".
+        The user opens an instant messaging instance on the profile.
+        The user downloads the image: a.jpg which can be found in this repo
+        The user, "Alice Ingvolostad" sends a message to "Zakir Durumeriç" saying: "Остановить нюхают My WiFi!".
+
+d.
+    How do I prove I did this?... Karen has an iMac and she prints via CUPS and she searched for landsharks on wikipedia?
+
+
